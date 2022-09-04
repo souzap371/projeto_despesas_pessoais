@@ -16,19 +16,25 @@ class ExpensesApp extends StatelessWidget {
 
     return MaterialApp(
       home: MyHomePage(),
-      theme: tema.copyWith(
-        colorScheme: tema.colorScheme.copyWith(
-          primary: Colors.purple,
-          secondary: Colors.amber,
-        ),
-        textTheme: tema.textTheme.copyWith(
-          headline6: TextStyle(
-            fontFamily: 'OpenSans',
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-        ),
+      theme: ThemeData(
+        primarySwatch: Colors.purple,
+        accentColor: Colors.amber,
+        fontFamily: 'Quicksand',
+        //colorScheme: tema.colorScheme.copyWith(
+        //  primary: Colors.purple,
+        //  secondary: Colors.amber,
+
+        textTheme: ThemeData.light().textTheme.copyWith(
+              headline6: TextStyle(
+                fontFamily: 'OpenSans',
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+              button: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
         appBarTheme: AppBarTheme(
           titleTextStyle: TextStyle(
             fontFamily: 'OpenSans',
